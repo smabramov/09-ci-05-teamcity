@@ -9,7 +9,7 @@
 5. Сделайте fork [репозитория](https://github.com/aragastmatb/example-teamcity).
 6. Создайте VM (2CPU4RAM) и запустите [playbook](./infrastructure).
 
-![t1]()
+![t1](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t1.png)
 
 ## Основная часть
 
@@ -17,24 +17,24 @@
 2. Сделайте autodetect конфигурации.
 3. Сохраните необходимые шаги, запустите первую сборку master.
 
-![t2]()
+![t2](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t2.png)
 
-![t3]()
+![t3](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t3.png)
 
-![t4]()
+![t4](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t4.png)
 
 4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
 5. Для deploy будет необходимо загрузить [settings.xml](./teamcity/settings.xml) в набор конфигураций maven у teamcity, предварительно записав туда креды для подключения к nexus.
 6. В pom.xml необходимо поменять ссылки на репозиторий и nexus.
 7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.
 
-![t5]()
+![t5](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t5.png)
 
-![t6]()
+![t6](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t6.png)
 
 8. Мигрируйте `build configuration` в репозиторий.
 
-![t7]()
+![t7](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t7.png)
 
 Ссылка на [.teamsity](https://github.com/smabramov/example-teamcity.git)
 
@@ -44,21 +44,21 @@
 12. Сделайте push всех изменений в новую ветку репозитория.
 13. Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.
 
-![t8]()
+![t8](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t8.png)
 
 14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.
 
-![t9]()
+![t9](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t9.png)
 
 15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`
 16. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки.
 17. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.
 
-![t10]()
+![t10](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t10.png)
 
 18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.
 
-![t11]()
+![t11](https://github.com/smabramov/09-ci-05-teamcity/blob/7beac47e8acc62c79e912f186c77bf3f0ec53103/jpg/t11.png)
 
 19. В ответе пришлите ссылку на репозиторий.
 
